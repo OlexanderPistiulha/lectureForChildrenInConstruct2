@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="isAlive" sid="863491491983479" static="0" type="number">1</variable>
+        <event-block sid="918245521431348">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="383250954734007" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="134469992603766" type="text">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="506463302219968" type="System">
+                    <param id="0" name="Variable">isAlive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="713715390824690">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="929437671502241" type="hero">
+                    <param id="0" name="Object">bug</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="288776966957953" type="hero" />
+                <action id="-9" name="Set value" sid="919096035858630" type="System">
+                    <param id="0" name="Variable">isAlive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="763649065463372">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="302013794800909" type="hero">
+                    <param id="0" name="Object">bigBug</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="552127535569912" type="hero" />
+                <action id="-9" name="Set value" sid="472973334777720" type="System">
+                    <param id="0" name="Variable">isAlive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="406480276709604">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="331139324038205" type="System">
+                    <param id="0" name="Variable">isAlive</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="512343439509487" type="text">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="0" name="Set text" sid="670984011141219" type="text">
+                    <param id="0" name="Text">&quot;You lose&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="745741027729229">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="880651789799230" type="hero">
+                    <param id="0" name="Object">goal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="545246745025353" type="text">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="0" name="Set text" sid="504034115432439" type="text">
+                    <param id="0" name="Text">&quot;You win&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
